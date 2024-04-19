@@ -8,7 +8,7 @@ function BlogPost() {
     const [post, setPost] = useState(null);
 
     useEffect(() => {
-        fetch(`http://localhost:9100/blog/${postId}`)
+        fetch(`https://amazondeploy2vercel.vercel.app/blog/${postId}`)
             .then(response => response.json())
             .then(data => setPost(data))
             .catch(error => console.error('Error fetching post:', error));
